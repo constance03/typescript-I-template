@@ -1,4 +1,8 @@
-function buscarCarrosPorMarca(frota, marca) {
+import { frota } from "./frota"
+import { TCarro } from "./types"
+
+
+function buscarCarrosPorMarca(frota:TCarro[], marca?: string): Array<TCarro> | Number {
   if (marca === undefined) {
     return frota
   }
@@ -9,3 +13,7 @@ function buscarCarrosPorMarca(frota, marca) {
     }
   )
 }
+
+console.log(buscarCarrosPorMarca(frota, "Ford"));
+
+//rodar o script: npm run start-frota
